@@ -27,6 +27,6 @@ function showMyVideos(data) {
   }
   html.push('</ul>');
   vid_data = html;
-  //alert(vid_data);
+  alert(vid_data);
   document.getElementById('video-results').innerHTML = html.join('');
 } 

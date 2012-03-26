@@ -1,3 +1,33 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$bg_color: #fff;
+$bg_color_s: #333300;
+$content_bg: #333;
+$border_color: #bbb;
+$text_color: #fff;
+$btn_color: #4d90fe;
+
+.primary-stuffs {
+        padding: 60px 30px 0px; /* top 60px to make the container go all the way to the bottom of the topbar */
+        background: $bg_color;
+        /*border: 1px solid $border_color;*/
+	
+      }
+#search-btn {
+    color: #000; 
+    background: $btn_color;
+    border: 1px solid #3079ED;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px; 
+}      
+
+#search-box {
+	/*border: 1px solid #3079ED;*/
+	
+}
+
+/* YouTube Search Style */
+      
+     

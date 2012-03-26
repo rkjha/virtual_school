@@ -9,7 +9,7 @@
   <!-- Youtube related stuffs-->
   <script 
     type="text/javascript" 
-    src="https://gdata.youtube.com/feeds/api/videos?q=python&v=2&max-results=10&alt=json-in-script&format=5&callback=showMyVideos">
+    src="https://gdata.youtube.com/feeds/api/videos?q=python&v=2&max-results=10&alt=json-in-script&format=5&callback=showMyVideos()">
   </script>
 </head>
 <body>
