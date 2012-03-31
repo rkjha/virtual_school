@@ -1,71 +1,17 @@
-<div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Virtual School</a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-</div>
+<div class="container" id="primary-stuffs">	
+          <div class="row-fluid">   
+             <div class="span4" id="video-search">
+    				    <h4>Search Videos</h4>
+               <form action = "/search" id="yt-search-box">
+                          <input type="text" name="keyword" id="ytSearchBox" placeholder="Type and Hit Enter" required/>
+                       </form> 
+					   </div>   
+					     
+             
+           <div class="span8" id="qa">
+            <%= image_tag('any-questions.jpg') %>
 
-	<div class="container primary-stuffs">
-    				
-    				<h2>Looking for some video tutorials? </h2>
-    				
-    				<form onsubmit="https://gdata.youtube.com/feeds/api/videos" method="GET" class=" well form-search yt-api">
-    					<input type="text" name="q" id="search-box" placeholder="e.g How to Learn Python"/>
-    					<input type="hidden" name="v" value="2" />
-    					<input type="hidden" name="max-results" value="10" />
-    					<input type="hidden" name="alt" value="json-in-script" />
-     					<input type="hidden" name="format" value="5" />
-    					<input type="hidden" name="callback" value="showMyVideos" />
-    					<input type="submit" class="button" id="search-btn" value="Search Videos"/>
-    				</form>
-				<div id="video-results">
-				<script>
-				  $('#video-results').append('<h4>Results Goes Here</h4>');			
-				</script>
-					<h4>Why should you try this ?</h4>
-					<br />
-						 <div class="tabbable">
-    							<ul class="nav nav-tabs">
-    								<li class="active"><a href="#1" data-toggle="tab">Learn</a></li>
-    								<li><a href="#2" data-toggle="tab">Share</a></li>
-								<li><a href="#3" data-toggle="tab">Have Fun</a></li>
-    							</ul>
-    							<div class="tab-content">
-    								<div class="tab-pane active" id="1">
-    									<p>Because, It's Easy to Learn from Video Tutorials, available freely from the 
-									reputed YouTube Channels like Khan Academy</p>
-									<img src="http://www.2webvideo.com/images/learning-video-easy-fun.jpg" alt="learn from video"/>
-    								</div>
-    								<div class="tab-pane" id="2">
-    									<p>Q&A provides an easy platform to share and discuss things together with your 
-									friends in a much better way! </p>
-									<img src = "http://www.dailyblogtips.com/wp-content/uploads/questionsandanswers.jpg" alt="q&a"/>
-    								</div>
-								<div class="tab-pane" id="3">
-									<p>And Most important thing - it's Fun, Learning becomes more easy when it has more Fun :)</p>
-									<img src="http://www.magnificentdollars2.com/wp-content/uploads/15_5_orig.gif" />							                                               	</div>	
-                     					</div>
-    						</div>
-    					<br />
-    				
-					<p>Virtual School where you can search video tutorials, ask questions or doubts, answer/disqus questions and problems..
-					and many other cool stuffs to speed up your Learning process! <strong> and of course you will have a lot 
-					of Fun doing that.</strong></p>
-      </div> 
-		<footer>
-			<p><em> &copy; 2012 Some Rights Reserved!</em></p>
-		</footer>
-    
-	</div> <!-- /container -->
+		          <a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+           </div>
+          </div> 
+  </div>

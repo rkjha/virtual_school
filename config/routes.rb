@@ -1,4 +1,5 @@
 VirtualSchool::Application.routes.draw do
+  
   get "pages/home"
 
   get "pages/about"
@@ -6,6 +7,12 @@ VirtualSchool::Application.routes.draw do
   get "pages/contact"
 
   get "pages/help"
+  
+  #match '/signin', :to => 'sessions#new'
+  match '/about', :to => 'pages#about'
+  match '/contact', :to => 'pages#contact'
+  match '/help', :to => 'pages#help'
+  match '/search', :to => 'videos#search'
 
   root :to => 'pages#home'
 

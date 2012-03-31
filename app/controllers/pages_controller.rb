@@ -1,5 +1,8 @@
 class PagesController < ApplicationController
+  	
+
   def home
+  	
   end
 
   def about
@@ -10,4 +13,6 @@ class PagesController < ApplicationController
 
   def help
   end
+  
+  
 end

@@ -6,15 +6,43 @@
   <%= stylesheet_link_tag    "pages", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <!-- Youtube related stuffs-->
-  <script 
-    type="text/javascript" 
-    src="https://gdata.youtube.com/feeds/api/videos?q=python&v=2&max-results=10&alt=json-in-script&format=5&callback=showMyVideos">
+
+  
+  <script type="text/javascript">
+    $(function () {
+    $("a.youtube").YouTubePopup({ autoplay: 0 });
+});    
+    $.fn.YouTubePopup.defaults = {
+    'youtubeId': '',
+    'title': '',
+    'idAttribute': 'rel',
+    'draggable': false,
+    'modal': true,
+    'width': 840,
+    'height': 600,
+    'hideTitleBar': true,
+    'clickOutsideClose': true,
+    'overlayOpacity': 0.5,
+    'autohide': 2,
+    'autoplay': 1,
+    'color': 'red',
+    'color1': 'FFFFFF',
+    'color2': 'FFFFFF',
+    'controls': 1,
+    'fullscreen': 1,
+    'loop': 0,
+    'hd': 1,
+    'showinfo': 0,
+    'theme': 'light'
+};
+
   </script>
+  
 </head>
 <body>
-
-<%= yield %>
-
+  <%= render 'layouts/header' %>
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+  
 </body>
 </html>

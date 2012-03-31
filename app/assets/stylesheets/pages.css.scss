@@ -8,13 +8,20 @@ $content_bg: #333;
 $border_color: #bbb;
 $text_color: #fff;
 $btn_color: #4d90fe;
+$sb_bg_color: #DEE2E3;
+$qa_bg_color: #E3ECFC;
+$header_bg_color: #609BFC;
 
-.primary-stuffs {
+#primary-stuffs {
         padding: 60px 30px 0px; /* top 60px to make the container go all the way to the bottom of the topbar */
         background: $bg_color;
         /*border: 1px solid $border_color;*/
-	
       }
+
+ #primary-stuffs {
+    overflow: auto;
+ }     
+
 #search-btn {
     color: #000; 
     background: $btn_color;
@@ -29,5 +36,46 @@ $btn_color: #4d90fe;
 }
 
 /* YouTube Search Style */
-      
-     
+
+#video-search {
+
+  /*  padding: 9px 0;
+    float: left;
+    left:60px;
+    top:60px;
+    width:250px;
+     padding: 5px;
+    border: 1px solid transparent;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px; */
+    background: $sb_bg_color;
+
+}
+
+#qa {
+   /* width: 680px;
+    margin-left: 250px;
+    border: 1px solid transparent;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px; */
+    background: $qa_bg_color;
+    
+}
+
+#yt-search-box {
+    padding: 4px;
+
+}
+
+#video-search h4 {
+    padding:5px;
+    //color: #bbb;
+    background: $header_bg_color;
+    text-shadow: 0 1px 0 rgba(255,255,255,.25);
+}
+
+#qa h4 {
+    padding:5px;
+    background: $header_bg_color;
+    text-shadow: 0 1px 0 rgba(255,255,255,.25);
+}
