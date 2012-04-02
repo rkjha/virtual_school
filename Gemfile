@@ -9,10 +9,14 @@ gem 'sqlite3'
 #gem 'youtube_it'
 gem 'youtube_search'
 gem 'bootstrap-sass', '2.0.0'
-gem 'will_paginate'
+#gem 'will_paginate'
 
 gem 'gravatar_image_tag', '1.0.0'
 gem 'bcrypt-ruby', '3.0.1'
+
+gem 'awesome_nested_set'
+#gem 'acts_as_commentable_with_threading'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -42,3 +46,5 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+gem "kaminari"

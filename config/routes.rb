@@ -1,5 +1,11 @@
 VirtualSchool::Application.routes.draw do
   
+
+ # opinio_model
+  #resources :questions do
+  # opinio
+  #end
+
   get "pages/home"
 
   get "pages/about"
@@ -15,7 +21,7 @@ VirtualSchool::Application.routes.draw do
   match '/search', :to => 'videos#search'
 
   # Q & A routes
-  match '/questions', :to => 'questions#index'
+  #match '/questions', :to => 'questions#index' ## 
   resources :questions
 
   resources :answers
@@ -29,10 +35,10 @@ VirtualSchool::Application.routes.draw do
 
   resources :sessions, :only => [:new, :create, :destroy]
 
-  resources :microposts
-
   resources :users
   match '/signup', :to => 'users#new'
+
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

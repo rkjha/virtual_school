@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def show
   	@user = User.find(params[:id])
   	@title = @user.name
-    @questions = @user.questions.paginate(page: params[:page], :per_page => 5)
+    @questions = @user.questions
     @questions_asked = @user.questions
   end
 

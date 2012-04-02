@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
 	def index
-		#@questions = Question.all
-		@questions = Question.paginate(:page => params[:page], :per_page => 10)
+		@questions = Question.all
+		#@questions = Question.paginate(:page => params[:page], :per_page => 10)
 	end
 
 	def create
@@ -16,15 +16,15 @@ class QuestionsController < ApplicationController
 
 	def show
 		@question = Question.find(params[:id])
-		@answer = current_user.answers.build if signed_in?
+        #if signed_in?
+ 		#	@user_who_commented = @current_user
+        #	@comment = Comment.build_from( @question, @user_who_commented.id, "Hey guys this is my comment!" )
+		#end
+		@answer = @question.answers.build if signed_in?
 	end
 
 	def destroy
 		
 	end
 
-	def search
-		# Search Questions & Answers using a keyword
-		tag = params[:keyword]
-	end
 end
