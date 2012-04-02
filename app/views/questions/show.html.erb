@@ -1,0 +1,30 @@
+<div class="span6">
+	<div id="question-top">	
+		<h2> Q. <%= @question.title %></h2>
+    	<%= @question.desc %>
+    	<div class="asker">Asked By <%= @question.user.name %></div>
+    </div>	
+    <hr />
+    <h3> Add Your Answer</h3>
+    <% if signed_in? %>
+
+    	<p>You're Signed in as <%= @current_user.name%></p>
+    	<%= form_for(@answer) do |f| %>
+  
+       		<div class="field">
+         		<%= f.text_area :ans, placeholder: "What's Your Answer" %>
+       		</div>
+      		<%= f.submit "Post", class: "btn btn-large btn-primary" %>
+		<% end %>
+    <% else %>
+    <p>You need to Sign In to answer</p>
+    <% end %>	
+    <h4>Answers</h4>
+    	<% if @question.answers.any? %>
+    		<p>All Answers are Here</p>
+
+    	<% else %>
+    		<p> No answer found!</p>
+    	<% end%>	
+
+</div>

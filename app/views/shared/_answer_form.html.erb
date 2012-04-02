@@ -1,0 +1,7 @@
+<%= form_for(@answer) do |f| %>
+  
+  <div class="field">
+    <%= f.text_area :ans, placeholder: "What's Your Answer" %>
+  </div>
+  <%= f.submit "POST", class: "btn btn-large btn-primary" %>
+<% end %>

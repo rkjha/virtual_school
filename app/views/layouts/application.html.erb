@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>VirtualSchool</title>
+  <title><%= title %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= stylesheet_link_tag    "pages", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -41,8 +41,13 @@
 </head>
 <body>
   <%= render 'layouts/header' %>
-    <%= yield %>
-    <%= render 'layouts/footer' %>
-  
+    <div class="container" id="primary-stuffs">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+      
+    </div>
 </body>
 </html>

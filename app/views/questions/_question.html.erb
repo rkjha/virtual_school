@@ -1,0 +1,6 @@
+<li>
+	<% title = question.title %>
+	<% id = question.id %>
+	<span class="content"><%= link_to "#{title}","/questions/#{id}" %> </span>
+	<span class="timestamp"> Asked <%= time_ago_in_words(question.created_at)%> ago</span>
+</li>

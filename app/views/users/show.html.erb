@@ -1,0 +1,29 @@
+<div class="row">
+
+<table class="profile" summary="profile inforrmation">
+	<tr>
+		<td class="main">
+			<h1>
+       <%= gravatar_for @user %>
+	     <%= @user.name %>
+      </h1>
+		</td>
+		<td class="sidebar round">
+			<strong>Name</strong> <%= @user.name %> <br />
+			<strong>URL</strong> <%= link_to user_path(@user), @user %><br />
+			<strong>Contact</strong> <%= @user.email %> <br />
+		</td>
+	 <tr>
+</table>
+	<div class="span8">
+    <% if @user.questions.any? %>
+      	<h3>Questions(<%= @user.questions.count %>) Asked By <%= @user.name %> </h3>
+      		<ol class="questions">
+      			<%= render @questions %>
+      		</ol>
+      		<%= will_paginate @questions, :class => 'flickr_pagination' %> 	
+    <% end %>
+  </div>
+ </div> 
+ 
+

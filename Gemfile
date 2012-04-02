@@ -8,6 +8,11 @@ gem 'rails', '3.2.2'
 gem 'sqlite3'
 #gem 'youtube_it'
 gem 'youtube_search'
+gem 'bootstrap-sass', '2.0.0'
+gem 'will_paginate'
+
+gem 'gravatar_image_tag', '1.0.0'
+gem 'bcrypt-ruby', '3.0.1'
 
 # Gems used only for assets and not required
 # in production environments by default.

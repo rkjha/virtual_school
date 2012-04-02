@@ -1,13 +1,12 @@
-<div class="container" id="primary-stuffs">
-            <div class="row-fluid">
+         <div class="row-fluid">
     			<div class="span4" id="video-search">
-    				   <h4>Search Videos</h4>
+    				   <h4>Search</h4>
 				       <form action = "/search" id="yt-search-box">
                           <input type="text" name="keyword" id="ytSearchBox" placeholder="Type and Hit Enter" required/>
                        </form>
                      <div id="video-results">
                          <h3>Video Results</h3>
-                       <ul>
+                       <ol>
    
                            <% @videos.each do |video| %>
                               <% video_id = video['video_id']
@@ -19,9 +18,9 @@
                              <%= link_to image_tag("#{thumbnail_url}"),'#',:rel => "#{video_id}", :class =>'youtube' %>
                              <!-- <img src=<%="#{thumbnail_url}" %> style=""/>
                              <a class="youtube" rel="4eYSpIz2FjU" href="#">Click me</a> -->
-
+                             <br />
                            <% end %>
-                      </ul> 
+                      </ol> 
                     </div>   
                 
 				</div>   
@@ -35,4 +34,3 @@
               </div> <!-- end of qa -->
 		
            </div> <!-- End of row Fluid -->
-  </div>

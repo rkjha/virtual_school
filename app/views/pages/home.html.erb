@@ -1,7 +1,6 @@
-<div class="container" id="primary-stuffs">	
-          <div class="row-fluid">   
+  <div class="row-fluid">   
              <div class="span4" id="video-search">
-    				    <h4>Search Videos</h4>
+    				    <h4>Search</h4>
                <form action = "/search" id="yt-search-box">
                           <input type="text" name="keyword" id="ytSearchBox" placeholder="Type and Hit Enter" required/>
                        </form> 
@@ -9,9 +8,26 @@
 					     
              
            <div class="span8" id="qa">
-            <%= image_tag('any-questions.jpg') %>
 
-		          <a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+              <% if signed_in? %>
+                <div class="span4">
+
+                  <section>
+                    <%= render 'shared/user_info' %>
+                  </section>
+                  <section>
+                    <%= render 'shared/question_form' %>
+                  </section>
+
+                </div>
+
+              <% else %>
+                  <%= image_tag('any-questions.jpg') %>
+
+                 <%= link_to "Signup Now",signup_path, class: "btn btn-large btn-primary" %>
+
+              <% end %>
+
            </div>
-          </div> 
-  </div>
+  </div> 
+ 

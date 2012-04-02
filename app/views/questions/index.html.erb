@@ -1,0 +1,9 @@
+<div class="span8">
+    <% if @questions.any? %>
+      	<h3>Questions Asked</h3>
+      		<ol class="questions">
+      			<%= render @questions %>
+      		</ol>
+      		<%= will_paginate @questions, :class => 'flickr_pagination' %> 	
+    <% end %>
+  </div>

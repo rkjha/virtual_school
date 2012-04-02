@@ -14,7 +14,25 @@ VirtualSchool::Application.routes.draw do
   match '/help', :to => 'pages#help'
   match '/search', :to => 'videos#search'
 
+  # Q & A routes
+  match '/questions', :to => 'questions#index'
+  resources :questions
+
+  resources :answers
+
+
   root :to => 'pages#home'
+
+  #users
+  match '/signin', :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy', via: :delete
+
+  resources :sessions, :only => [:new, :create, :destroy]
+
+  resources :microposts
+
+  resources :users
+  match '/signup', :to => 'users#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
