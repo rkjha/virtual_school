@@ -29,7 +29,23 @@
              
               <div class="span8" id="qa">
                 <h4>Possibly Related Questions</h4>
-                <p>No Match Found</p>
+                <div class="answer-box">
+                  <% if @related_questions.nil? %>
+                    <p>No Match Found</p>
+                  <% else %>
+                  <ul>
+                    <% @related_questions.each do |q| %>
+                    <li>
+                        <% title = q.title %>
+                        <% id = q.id %>
+                        <% @asker = q.user %>
+                        <% @name  = q.user.name %>
+                        <span class="content"><%= link_to "#{title}","/questions/#{id}" %> </span>
+                        <span class="timestamp"> Asked <%= time_ago_in_words(q.created_at)%> ago by <strong><%= link_to "#{@name}",@asker %></strong></span>
+                    </li>
+                    <% end%>
+                  </ul>  
+                <% end%>
                   
               </div> <!-- end of qa -->
 		

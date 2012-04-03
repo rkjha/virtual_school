@@ -1,8 +1,8 @@
-<%= form_for(@question) do |f| %>
+<%= form_for @question do |f| %>
   
   <div class="field">
-    <%= f.text_field :title, placeholder: "Type Your Question ?" %>
-    <%= f.text_area :desc, placeholder: "Describe Your question in detail" %>
+    <%= f.text_field :title, placeholder: "Type Your Question ?", required: "required" %>
+    <%= f.text_area :desc, placeholder: "Describe Your question in detail", :rows => "5", required: "required" %>
   </div>
   <%= f.submit "POST", class: "btn btn-large btn-primary" %>
 <% end %>

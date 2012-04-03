@@ -1,4 +1,14 @@
-<div class="span8">
+ <div class="row-fluid">     
+
+  <div class="span4" id="video-search">
+    				    <h4>Search</h4>
+               <form action = "/search" id="yt-search-box">
+                          <input type="text" name="keyword" id="ytSearchBox" placeholder="Type and Hit Enter" required/>
+                       </form> 
+  </div>  
+
+
+  <div class="span8">
     <% if @questions.any? %>
       	<h3>Questions Asked</h3>
       		<ol class="questions">
@@ -7,3 +17,9 @@
       		
     <% end %>
   </div>
+
+
+  </div> 
+
+ 
+     

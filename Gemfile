@@ -10,6 +10,7 @@ gem 'sqlite3'
 gem 'youtube_search'
 gem 'bootstrap-sass', '2.0.0'
 #gem 'will_paginate'
+gem 'acts_as_indexed'
 
 gem 'gravatar_image_tag', '1.0.0'
 gem 'bcrypt-ruby', '3.0.1'

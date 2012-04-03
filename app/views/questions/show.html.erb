@@ -1,4 +1,15 @@
-<div class="span6">
+<div class="row-fluid">     
+
+  <div class="span4" id="video-search">
+                        <h4>Search</h4>
+               <form action = "/search" id="yt-search-box">
+                          <input type="text" name="keyword" id="ytSearchBox" placeholder="Type and Hit Enter" required/>
+                       </form> 
+  </div> 
+
+
+
+ <div class="span8">
 	<div id="question-top">	
 		<h2> Q. <%= @question.title %></h2>
     	<%= @question.desc %>
@@ -7,20 +18,20 @@
     <hr />
     <h3>Answers</h3>
     <% if @question.answers.any? %>
-      <ol class="answers">
+      <div class="answers" style="display:block, color:#333; padding:5px, margin: 10px;">
         <%= render @question.answers %>
-      </ol> 
+      </div> 
     <% else%>
         <p>Nobody has answered yet!</p>
     <% end%>
     <h4> Add Your Answer</h4>
     <% if signed_in? %>
 
-    	<p>You're Signed in as <%= @current_user.name%></p>
          <%= render 'shared/answer_form' %>
     <% else %>    
         <p> You need to sign in to reply</p>
     <% end %>	
     
 
-</div>
+  </div>
+ </div> 
