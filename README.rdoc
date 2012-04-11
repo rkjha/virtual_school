@@ -1,14 +1,1 @@
-== Welcome to Virtual School
-
-What is this ? 
-
-It's a web application that would work as a platform for students => they can watch free video tutorials
-and discuss together in a simple and easy to use Q&A.
-
-Is it completely Free ?
-
-Yeah! both in terms of freedom as well as cost
-
-Is registration necessary ?
-
-NO, Absolutely not but it may help you in tracking your progress and discussions!
+An experiment - a web mash up for youtube video search and Q&A - actually I created just for fun and learning !!
